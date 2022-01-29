@@ -1,0 +1,25 @@
+{
+  "name": "@packages/runner-ct",
+  "version": "0.0.0-development",
+  "private": true,
+  "browser": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-prod": "cross-env NODE_ENV=production yarn build && tsc",
+    "clean-deps": "rm -rf node_modules",
+    "cypress:open": "ts-node ../../scripts/cypress.js open-ct --project ${PWD}",
+    "cypress:run": "ts-node ../../scripts/cypress.js run-ct --project ${PWD}",
+    "postinstall": "echo '@packages/runner needs: yarn build'",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.json src",
+    "test": "ts-node ../../scripts/cypress.js run-ct --project ${PWD}",
+    "watch": "webpack --watch --progress --config webpack.config.ts"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0",
+    "webpack-dev-middleware": "*"
+  },
+  "files": [
+    "dist"
+  ]
+}

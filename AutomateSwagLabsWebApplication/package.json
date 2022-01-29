@@ -1,0 +1,10 @@
+{
+  "name": "cypress",
+  "productName": "Cypress",
+  "description": "Cypress.io end to end testing tool",
+  "version": "9.3.1",
+  "electronVersion": "15.3.4",
+  "electronNodeVersion": "\r\n16.5.0",
+  "main": "index.js",
+  "env": "production"
+}
