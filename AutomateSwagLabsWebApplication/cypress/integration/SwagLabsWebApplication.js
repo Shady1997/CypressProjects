@@ -21,5 +21,11 @@ it('Choose all products' , function(){
 it('Move to checklist page' , function(){
     cy.scrollTo(0, -300)
     cy.wait(3000)
-    cy.get('.shopping_cart_badge').click()
+    cy.get('.shopping_cart_link').click()
 })
+
+//Logout from application
+// it('Logout from app' , function(){
+//     cy.get('#react-burger-menu-btn').click()  
+//     cy.get('#logout_sidebar_link').click()
+// })
